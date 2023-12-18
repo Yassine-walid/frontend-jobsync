@@ -1,0 +1,122 @@
+body{
+    background-color:#FDFFFC ;
+    padding-top: 80px;
+}
+.form-announcement{
+
+    text-align: start;
+    background-color: #FDFFFC;
+    
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 10PX;
+    border-radius: 11px;
+    -webkit-box-shadow: 10px 10px 26px -5px rgba(199,199,199,1);
+    -moz-box-shadow: 10px 10px 26px -5px rgba(199,199,199,1);
+    box-shadow: 10px 10px 26px -5px rgba(199,199,199,1);
+}
+
+.card-body{
+    margin: 0;
+    padding: 0;
+}
+
+.form-img{
+    margin-top: 8px;
+    width: 600px;
+    height: 300px;
+    object-fit: fill;
+    padding: 0;
+}
+
+.txtForm,.card-header{
+    margin-left: 10px;
+}
+
+.card-text{
+    margin-top: 20px;
+    font-size: 14px;
+    max-width: 550px;
+    width: 100%;
+}
+.devider{
+    margin-right: 10px;
+}
+.card-header{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+
+.logoImg{
+    margin-left: 10px;
+    border: 3px solid #235789;
+    width: 50px;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.enterpriseName{
+    font-weight: bold;
+}
+
+.row{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.exp{
+    float: right;
+    margin-right: 20px;
+}
+.date{
+    float: right;
+    margin-right: 20px;
+}
+
+.btnAply{
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center;
+    background-color: #235789;
+    height: 40px;
+    border-bottom-left-radius:11px ;
+    border-bottom-right-radius:11px ;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #FDFFFC;
+}
+
+@media (max-width: 768px) {
+    /* Styles specific for mobile devices */
+    /* For example, you can adjust the layout, font sizes, etc. */
+    body {
+      font-size: 14px;
+      margin: 20px
+    }
+  
+    /* Example: Adjust the layout for smaller screens */
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .form-img{
+        max-width: 100%;
+        height: auto;
+        display: block; /* Ensures the image doesn't have extra space below it */
+        margin: 0 auto;
+    }
+  }
+
+
+  
+ 
+  
+

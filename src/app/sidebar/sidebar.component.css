@@ -1,0 +1,73 @@
+/* sidebar.component.css */
+.sidebar {
+    width: 250px;
+    height: 90%;
+    position: fixed;
+    top: 66px;
+    left: 5px;
+    bottom: 50px;
+    background-color: #235789;
+    color: white;
+    border-radius: 11px;
+    display: block;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 10px;
+  }
+  
+  .sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .sidebar-menu li a:hover {
+    background-color: #555;
+  }
+
+
+  @media (max-width: 1131px) {
+    /* Styles specific for mobile devices */
+    /* For example, you can adjust the layout, font sizes, etc. */
+    .sidebar {
+        display: none; /* Hide on smaller screens */
+      }
+  }
+
+  .logoImg{
+    margin-left: 10px;
+    border: 3px solid #235789;
+    width: 70px;
+    height: 70px;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.userFullname{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.row{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.title{
+    margin-top: -10px;
+    margin-left: 15px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.hrLine{
+    background-color: #FDFFFC;
+    height: 3PX;
+}
+
+  

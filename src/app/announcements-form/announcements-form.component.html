@@ -1,0 +1,37 @@
+<app-sidebar></app-sidebar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcments </title>
+</head>
+<body>
+    <div *ngIf="fetchedData">
+        <div *ngFor="let item of fetchedData">
+            <div class="form-announcement">
+                    <div class="row">
+                        <div class="column">
+                            <img class="logoImg" src="{{item.enterprise.logoUrl}}" alt="">
+                            <span class="enterpriseName"> {{item.enterprise.name}}</span><span class="date">{{item.puclicationDate}}</span>
+                        </div>
+                    </div>
+                <div class="card-body">
+                  <div class="txtForm">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <span>Degree {{item.degree}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="exp"> Experience {{item.yearsExp}} years.</span> 
+                    <hr class="devider">
+                    <p class="card-text">{{item.description}}</p>
+                    
+                  </div>
+                <img class="form-img" src="{{item.bannerUrl}}" alt="">
+                </div>
+                <div class="btnAply">
+                    <a  class="" href="https://google.com" target="_blank" rel="no">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.container-fluid{
+    background-color: #235789;
+    min-height: 60px;
+   
+}
+
+.navbar {
+    margin-top: 0;
+  }
+  
+/* Resetting default styles */
+body,
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+/* Removing additional spacing */
+.navbar-collapse {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+     /* Adjust as needed */
+  }
+
+
+  @media (max-width: 768px) {
+    /* Styles specific for mobile devices */
+    /* For example, you can adjust the layout, font sizes, etc. */
+        .form-control{
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+  }
+
+  .navbar-brand{
+    color:#FDFFFC;
+  }
+
+  .nav-item a{
+    color: #FDFFFC;
+  }
+
+
+
+
+/* Resetting padding on the body */
