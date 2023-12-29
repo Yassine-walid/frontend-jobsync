@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { DataService } from '../data.service';
 import { AuthService } from '../auth/auth.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-announcements-form',
@@ -12,10 +13,15 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   styleUrls: ['./announcements-form.component.css']
 })
 export class AnnouncementsFormComponent implements OnInit{
+
+  
+
   fetchedData: any;
   
 
-  constructor(private dataService: DataService,private authService:AuthService) { }
+  constructor(private dataService: DataService,private authService:AuthService,private router:Router) { }
+
+ 
 
   ngOnInit(): void {
     
@@ -28,6 +34,10 @@ export class AnnouncementsFormComponent implements OnInit{
       
      
     });
+  }
+
+  navigateToEnterpriseProfile(enterpriseId: string) {
+    this.router.navigate(['/enterprise-profile', enterpriseId]);
   }
 
 }

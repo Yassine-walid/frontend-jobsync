@@ -10,8 +10,8 @@
     <div *ngIf="fetchedData">
         <div *ngFor="let item of fetchedData">
             <div class="form-announcement">
-                    <div class="row">
-                        <div class="column">
+                    <div class="row" >
+                        <div  class="column" style="cursor: pointer;" (click)="navigateToEnterpriseProfile(item.enterprise.id)" >
                             <img class="logoImg" src="{{item.enterprise.logoUrl}}" alt="">
                             <span class="enterpriseName"> {{item.enterprise.name}}</span><span class="date">{{item.puclicationDate}}</span>
                         </div>

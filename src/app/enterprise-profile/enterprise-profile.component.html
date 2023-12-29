@@ -1,0 +1,61 @@
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="card card-style1 border-0">
+                    <!-- Content for the left column -->
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                                <img src="{{enterpriseInfo.logoUrl}}" class="imgLogo" alt="...">
+                            </div>
+                            <div class="col-lg-6 px-xl-10">
+                                <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                    <h3 class="h2 text-white mb-0">{{enterpriseInfo.name}}</h3>
+                                    
+                                </div>
+                                <!-- Other details -->
+                                <ul class="list-unstyled mb-1-9">
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> {{enterpriseInfo.address}}</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone Number :</span> {{enterpriseInfo.phoneNumber}}</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Website Url:</span> {{enterpriseInfo.websiteUrl}}</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> {{enterpriseInfo.email}}</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Foundation Date:</span> {{enterpriseInfo.foundationDate}}</li>
+                                </ul>
+                                <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                    <!-- Social icons -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start of the split column layout -->
+            <div class="col-lg-6 mb-4 mb-sm-5">
+                <div>
+                    <span class="section-title text-primary mb-3 mb-sm-4">Description</span>
+                    <!-- Content for the "About Me" section -->
+                    <p class="mb-0">{{enterpriseInfo.description}}</p>
+                </div>
+                <!-- Additional content if needed -->
+            </div>
+            <div class="col-lg-6 mb-4 mb-sm-5">
+                <div>
+                    <span class="section-title text-primary mb-3 mb-sm-4">Announcements</span>
+
+                    <div *ngFor="let item of enterpriseInfo.announcements">
+                        <div class="card" style="border-radius: 25px;" >
+                            <div class="card-body">
+                              <h5 class="card-title">{{item.title}}</h5>
+                              <p class="" style="word-wrap: break-word; ">{{item.description}}</p>
+                              <a href="#" style="width: 100%;" class="btn btn-primary">Apply</a>
+                            </div>
+                        </div><br>  
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End of the split column layout -->
+        </div>
+    </div>
+</section>

@@ -11,7 +11,11 @@ export class DataService {
   jwt:string="Bearer "+localStorage.getItem('jwt') || '{}';
   httpHeaders = new HttpHeaders({"Authorization":this.jwt})
 
-  private apiUrl = 'http://localhost:8080/announcement/all'; // Replace this with your API endpoint
+  private apiUrl = 'http://localhost:8080/announcement/all'; 
+  
+  private apiUrlEntreprise = 'http://localhost:8080/enterprise/';
+
+  private apiUrlEntrepriseAnn = 'http://localhost:8080/announcement/enterprise';
 
   constructor(private http: HttpClient,private authService:AuthService) { }
 
@@ -20,4 +24,10 @@ export class DataService {
     console.log(this.httpHeaders)
     return this.http.get<any>(this.apiUrl,{headers:this.httpHeaders});
   }
+
+  getDataEnterprise(id:Number): Observable<any> {
+    return this.http.get<any>(this.apiUrlEntreprise+id,{headers:this.httpHeaders});
+  }
+
+  
 }

@@ -23,6 +23,10 @@ export class AuthService {
     return this.httpClient.post<UserModel>('http://localhost:8080/login',user,{observe:'response'})
   }
 
+  register(user: UserModel):Observable<HttpResponse<UserModel>>{
+    return this.httpClient.post<UserModel>('http://localhost:8080/api/register',user,{observe:'response'})
+  }
+
   saveToken(jwt:string){
     localStorage.setItem('jwt',jwt)
     this.token = jwt;

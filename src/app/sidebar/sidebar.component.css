@@ -47,6 +47,7 @@
     height: 70px;
     padding: 2px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .userFullname{
@@ -68,6 +69,10 @@
 .hrLine{
     background-color: #FDFFFC;
     height: 3PX;
+}
+
+.profile{
+  cursor: pointer;
 }
 
   

@@ -1,0 +1,124 @@
+    <section class="head" style="background-color: #eee;">
+   
+        <div class="container py-5">
+          <h1>Profile</h1> <br><br>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4">
+                <div class="card-body text-center">
+                  <img src="{{userData.imageProfileUrl}}" alt="avatar"
+                    class="imgLog">
+                  <h5 class="my-3">{{userData.firstName}} {{userData.lastName}} </h5>
+                  <p class="text-muted mb-1">Full Stack Developer</p>
+                  <p class="text-muted mb-4">{{userData.address}} {{userData.vile}}</p>
+                  <p class="text-muted mb-4">{{userData.pay}}</p>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Full Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{userData.firstName}} {{userData.lastName}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{userData.email}} </p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Phone</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">0{{userData.phoneNumber}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Birthday</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{userData.birthday}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{userData.address}} {{userData.vile}} {{userData.pay}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Country</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"> {{userData.pay}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Username</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{userData.username}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1>Experiences</h1><br><br><br>
+            <div *ngFor="let experience of userData.experiences ">
+              <div class="card mb-1 mb-lg-0">
+                <div class="card-body p-0">
+                  <div class="row">
+                    
+                      <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                          <p class="mb-4"><span class="text-primary font-italic me-1"></span> {{experience.title}}</p>
+                          <hr>
+                          <p class="mb-1" style="font-size: .77rem; font-weight: bold ;">Entreprise : {{experience.enterprise}}</p>
+                          <p class="mb-1" style="font-size: .77rem;">Start : {{experience.startDay}}</p>
+                          <div *ngIf="experience.endDay === null; else elseBlock">
+                            <!-- Content to display if 'result' is null -->
+                            <p class="mb-1" style="font-size: .77rem;">End : Still Working </p>
+                          </div>
+                          <ng-template #elseBlock>
+                            <!-- Content to display if 'result' is not null -->
+                            <p class="mb-1" style="font-size: .77rem;">End : {{experience.endDay}}</p>
+                          </ng-template>
+                          <p class="mb-1" style="font-size: .77rem; font-weight: 500;">Mission : </p>
+                          <p class="mb-1" style="font-size: .77rem;">{{experience.description}} </p>
+
+                          <p class="mb-1" style="font-size: .77rem; font-weight: 500;">Skills : </p>
+                          <div *ngFor="let skill of experience.skills">
+                            <p class="mb-1" style="font-size: .77rem;">{{skill}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-sm position-absolute top-0 end-0 m-2">Update</button>
+              </div> <br><br>
+            </div>
+          </div>
+        </div>
+      </section>

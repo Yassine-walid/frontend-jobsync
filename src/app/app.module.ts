@@ -12,6 +12,9 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { EnterpriseProfileComponent } from './enterprise-profile/enterprise-profile.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     HomeSliderComponent,
     LoginFormComponent,
+    RegisterFormComponent,
+    UserProfileComponent,
+    EnterpriseProfileComponent,
     
     
   ],
